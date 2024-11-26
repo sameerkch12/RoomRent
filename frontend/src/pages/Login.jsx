@@ -17,7 +17,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/api/v1/user/send-otp`, { phoneNumber });
+     // const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/api/v1/user/send-otp`, { phoneNumber });
       alert("OTP sent successfully!");
       setStep(2);
     } catch (error) {

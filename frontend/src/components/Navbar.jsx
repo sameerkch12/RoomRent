@@ -28,10 +28,10 @@ const Navbar = () => {
     navigate("/login")
   }
 
-  const handleLogout = () => {
+  /*const handleLogout = () => {
     localStorage.removeItem("token");
     navigate("/login");
-  };
+  };*/
   
   const getLocation = () => {
     if (navigator.geolocation) {
