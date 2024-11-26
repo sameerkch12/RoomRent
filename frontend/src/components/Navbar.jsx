@@ -40,7 +40,7 @@ const Navbar = () => {
           const { latitude, longitude } = position.coords;
 
           // Send the data to the backend
-          fetch("http://localhost:8000/api/v1/hotels/get-location", {
+          fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/hotels/get-location`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

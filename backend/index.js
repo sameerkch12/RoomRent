@@ -49,3 +49,12 @@ app.use("/api/v1/user", userRoute);
 app.listen(PORT, () => {
     console.log(`Server is running on port http://localhost:${PORT}`);
 });
+
+// Keep the server awake on Render
+setInterval(() => {
+    https.get('https://roomrent-4b82.onrender.com', (res) => {
+      console.log(`Server hit with status code: ${res.statusCode}`);
+    }).on('error', (e) => {
+      console.error(`Got error: ${e.message}`);
+    });
+  }, 3 * 60 * 1000);

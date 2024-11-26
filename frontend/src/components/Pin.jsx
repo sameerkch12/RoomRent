@@ -11,7 +11,7 @@
 //   useEffect(() => {
 //     const fetchHotels = async () => {
 //       try {
-//         const response = await axios.get("http://localhost:8000/api/v1/hotels/hotels"); // Your backend endpoint for fetching hotels
+//         const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/v1/hotels/hotels`); // Your backend endpoint for fetching hotels
 //         if (response.data && Array.isArray(response.data.hotels)) {
 //           setHotels(response.data.hotels); // Assuming the backend sends an object with 'hotels' key
 //         } else {

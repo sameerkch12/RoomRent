@@ -22,7 +22,7 @@ const HotelList = () => {
   useEffect(() => {
     const fetchHotels = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/v1/hotels/hotels");
+        const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/v1/hotels/hotels`);
         setHotels(response.data);
 
         // Initialize currentIndexes for each hotel with an index of 0

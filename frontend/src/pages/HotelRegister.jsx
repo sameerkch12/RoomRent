@@ -68,7 +68,7 @@ const HotelRegister = () => {
       Object.keys(hotel).forEach((key) => formData.append(key, hotel[key]));
       images.forEach((image) => formData.append("images", image));
 
-      const response = await axios.post("http://localhost:8000/api/v1/hotels/create", formData, {
+      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/api/v1/hotels/create`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
