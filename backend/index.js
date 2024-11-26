@@ -19,7 +19,10 @@ const PORT = process.env.PORT || 4000;
 const MONGOURL = process.env.MONGO_URL;
 
 // Enable CORS for all route
-app.use(cors());
+app.use(cors({
+  origin: 'https://roomrent-1.onrender.com', // Allow only your frontend
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
+}));
 
 // Middleware to parse incoming requests
 app.use(bodyParser.json());
