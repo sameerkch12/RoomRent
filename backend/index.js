@@ -33,6 +33,13 @@ mongoose.connect(MONGOURL, { useNewUrlParser: true, useUnifiedTopology: true })
         console.log("Connection error:", error);
     });
 
+
+ //nomal express start
+app.get('/', (req, res) => {
+    res.send('Hello World!')
+})
+
+
 // Routes
 app.use("/api/v1/hotels", hotelRoute);
 app.use("/api/v1/user", userRoute);
